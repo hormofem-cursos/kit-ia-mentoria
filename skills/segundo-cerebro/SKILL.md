@@ -50,7 +50,9 @@ registrar.
 No começo de toda tarefa nova:
 
 1. Leia `Quem sou eu.md` (uma vez por sessão).
-2. Rode `buscar.mjs` com os termos da tarefa **e sinônimos** (ex.: "site", "página", "landing").
+2. Rode `buscar.mjs` com os termos da tarefa **e sinônimos**, todos numa busca só (ex.:
+   `buscar.mjs "site página landing"`). Rode o comando sozinho: laço `for` ou comandos
+   encadeados com `cat` e `ls` fazem o Claude Code pedir licença ao médico a cada vez.
    Leia as notas que aparecerem. Busca sem resultado não prova que o assunto não existe: tente
    `--escopo tudo`.
 3. Reaproveite a decisão já tomada, siga o padrão que já existe, respeite a preferência anotada,

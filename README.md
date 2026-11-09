@@ -23,7 +23,7 @@ Mentoria HORMOFEM. Ele monta o **segundo cérebro** e ensina o Claude Code a us�
    `settings.json.antes-do-kit`): no início da sessão (lembrete e últimos registros), a cada
    pedido (as notas relacionadas vão junto) e no fim (pede o registro uma vez, se faltou, e roda
    a manutenção: índice, exame semanal e salvamento no GitHub a cada 30 minutos). Também libera
-   os comandos do cofre para o Claude rodar sem pedir licença a cada vez.
+   os comandos e a pasta do cofre para o Claude ler, escrever e buscar sem pedir licença a cada vez.
 
 Inspirado no LÉO Brain, o segundo cérebro do Dr. Leonardo Jacobsen.
 
