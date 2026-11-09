@@ -26,7 +26,7 @@ try {
   }
   const perfil = lerNota(path.join(COFRE, "Quem sou eu.md"));
   const quem = !perfil ? "A nota Quem sou eu.md ainda não existe."
-    : perfil.status === "modelo" ? "A nota Quem sou eu.md ainda está vazia: no primeiro momento oportuno, ofereça montá-la a partir do que o médico já tem (Instagram, site, Lattes, currículo), pelo método da skill segundo-cerebro, seção 5. Sem questionário."
+    : perfil.status === "modelo" ? "A nota Quem sou eu.md ainda está vazia: ofereça montá-la com o que o médico tiver (site, currículo, Instagram ou uma pasta do negócio), uma página curta."
     : "Leia Quem sou eu.md antes da primeira tarefa.";
   const busca = `node "${caminhoSistema("buscar.mjs")}" "termos"`;
   const reg = `node "${caminhoSistema("registrar.mjs")}" "Título" "o que mudou"`;

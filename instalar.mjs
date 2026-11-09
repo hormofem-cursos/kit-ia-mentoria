@@ -63,7 +63,7 @@ if (!fs.existsSync(path.join(COFRE, ".obsidian"))) { copiarPasta(path.join(MODEL
 const diario = path.join(COFRE, "diario", `${hoje}.md`);
 if (!fs.existsSync(diario)) {
   const [y, m, d] = hoje.split("-");
-  fs.writeFileSync(diario, `---\ntipo: diario\ncriado: ${hoje}\natualizado: ${hoje}\ntags: [diario]\n---\n\n**Registro do dia ${d}/${m}/${y}.**\n\n# ${d}/${m}/${y}\n\n## Segundo cérebro montado\n- O que mudou: cofre criado pelo kit da Mentoria HORMOFEM.\n- Em aberto: montar a nota [[Quem sou eu]] (peça ao Claude e mande Instagram, site, Lattes ou currículo).\n`);
+  fs.writeFileSync(diario, `---\ntipo: diario\ncriado: ${hoje}\natualizado: ${hoje}\ntags: [diario]\n---\n\n**Registro do dia ${d}/${m}/${y}.**\n\n# ${d}/${m}/${y}\n\n## Segundo cérebro montado\n- O que mudou: cofre criado pelo kit da Mentoria HORMOFEM.\n- Em aberto: montar a nota [[Quem sou eu]] (peça ao Claude e mande site, currículo, Instagram ou uma pasta do negócio).\n`);
   feito.push("Diário de hoje criado");
 }
 try { execFileSync(process.execPath, [path.join(COFRE, ".sistema", "indice.mjs"), "--quieto"], { stdio: "ignore" }); feito.push("Índice gerado"); } catch {}
@@ -131,4 +131,4 @@ feito.push("Gatilhos ligados: início da sessão, cada pedido e fim da sessão")
 
 console.log("\nKit da Mentoria HORMOFEM instalado.\n");
 for (const f of feito) console.log("  ✓ " + f);
-console.log(`\nPróximo passo: abra o Obsidian, escolha "Abrir pasta como cofre" e selecione ${COFRE}.\nDepois peça ao Claude Code: "Monte a minha nota Quem sou eu" e mande Instagram, site, Lattes ou currículo.\nSe algo der errado: node "${path.join(SIS, "diagnostico.mjs")}"\n`);
+console.log(`\nPróximo passo: abra o Obsidian, escolha "Abrir pasta como cofre" e selecione ${COFRE}.\nDepois peça ao Claude Code: "Monte a minha nota Quem sou eu" e mande o que tiver: site, currículo, Instagram ou uma pasta do negócio.\nSe algo der errado: node "${path.join(SIS, "diagnostico.mjs")}"\n`);
