@@ -1,0 +1,16 @@
+{
+  "colorGroups": [
+    { "query": "[tipo:projeto]", "color": { "a": 1, "rgb": 4886745 } },
+    { "query": "[tipo:decisao]", "color": { "a": 1, "rgb": 15105570 } },
+    { "query": "[tipo:preferencia]", "color": { "a": 1, "rgb": 9323693 } },
+    { "query": "[tipo:armadilha]", "color": { "a": 1, "rgb": 14435901 } },
+    { "query": "[tipo:padrao]", "color": { "a": 1, "rgb": 4094555 } },
+    { "query": "[tipo:pessoa]", "color": { "a": 1, "rgb": 13061007 } },
+    { "query": "[tipo:fonte]", "color": { "a": 1, "rgb": 9079434 } },
+    { "query": "[tipo:perfil]", "color": { "a": 1, "rgb": 6041986 } }
+  ],
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true
+}

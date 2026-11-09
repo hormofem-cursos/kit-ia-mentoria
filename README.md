@@ -7,19 +7,25 @@ Mentoria HORMOFEM. Ele monta o **segundo cérebro** e ensina o Claude Code a us�
 
 | Arquivo ou pasta | O que é |
 |---|---|
-| `skills/segundo-cerebro/` | A skill que ensina o Claude Code a consultar o segundo cérebro antes de cada tarefa e a registrar nele o que foi decidido depois. Traz os modelos das notas iniciais |
-| `instalar.mjs` | O instalador. Roda com Node.js e não apaga nada que já exista |
+| `skills/segundo-cerebro/` | A skill com o método: consultar antes, registrar depois, tipos de nota, faxina, salvamento |
+| `cofre/` | O modelo do segundo cérebro: notas Início e Quem sou eu, modelos de nota, configuração do Obsidian e os scripts de `.sistema/` (busca, memória automática, cobrança de registro, índice, exame de saúde, salvamento no GitHub, diagnóstico) |
+| `instalar.mjs` | O instalador. Roda com Node.js 18 ou mais novo e não apaga nada que já exista |
 
 ## O que o instalador faz
 
 1. Copia as skills para `~/.claude/skills/`.
-2. Cria o segundo cérebro em `~/segundo-cerebro`, com as pastas `00-entrada`, `01-projetos`,
-   `02-areas`, `03-referencias`, `04-arquivo` e `diario`, mais as notas `LEIA-ME`, `Índice` e
-   `Quem sou eu`.
+2. Cria o segundo cérebro em `~/segundo-cerebro`: `Quem sou eu.md`, `Início.md`, `Índice.md`,
+   as pastas `notas/`, `diario/`, `fontes/`, `pessoal/` e `modelos/`, o Obsidian configurado
+   (marcadores, cores por tipo no grafo, diário e modelos) e os scripts em `.sistema/`.
 3. Acrescenta ao `~/.claude/CLAUDE.md` global um bloco com as regras do segundo cérebro
    (marcado, para poder ser atualizado sem duplicar).
-4. Liga um lembrete de início de sessão no `~/.claude/settings.json` (guarda antes uma cópia
-   em `settings.json.antes-do-kit`).
+4. Liga três gatilhos no `~/.claude/settings.json` (guarda antes uma cópia em
+   `settings.json.antes-do-kit`): no início da sessão (lembrete e últimos registros), a cada
+   pedido (as notas relacionadas vão junto) e no fim (pede o registro uma vez, se faltou, e roda
+   a manutenção: índice, exame semanal e salvamento no GitHub a cada 30 minutos). Também libera
+   os comandos do cofre para o Claude rodar sem pedir licença a cada vez.
+
+Inspirado no LÉO Brain, o segundo cérebro do Dr. Leonardo Jacobsen.
 
 Pode rodar de novo quando o kit for atualizado: ele só acrescenta e atualiza o que é dele.
 

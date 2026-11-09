@@ -1,5 +1,5 @@
 ---
-tipo: area
+tipo: perfil
 criado: {{DATA}}
 atualizado: {{DATA}}
 tags: [perfil]
