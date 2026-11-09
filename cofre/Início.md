@@ -13,7 +13,7 @@ tags: [sistema]
 
 | Pasta | Quem escreve | O que vai nela |
 |---|---|---|
-| [[Quem sou eu]] | você | Seu perfil, projetos e jeito de trabalhar. O Claude lê antes de toda tarefa |
+| [[Quem sou eu]] | o Claude, com o que você mandar | Seu perfil, projetos e jeito de trabalhar, montado a partir do seu Instagram, site, Lattes ou currículo. O Claude lê antes de toda tarefa |
 | `notas/` | o Claude | Uma nota por assunto: projetos, decisões, preferências, erros a evitar, padrões, pessoas |
 | `diario/` | o Claude | Uma nota por dia com o que mudou, decidiu e ficou em aberto |
 | `fontes/` | o Claude, a seu pedido | Resumos de artigos, livros, aulas e cursos, sempre com a origem |

@@ -47,7 +47,10 @@ Requisitos: Git e Node.js instalados.
    ```
 
 3. Diga ao usuário para abrir o Obsidian, escolher "Abrir pasta como cofre" e selecionar a
-   pasta `segundo-cerebro`, e depois preencher a nota `02-areas/Quem sou eu.md`.
+   pasta `segundo-cerebro`.
+4. Ofereça montar a nota `Quem sou eu.md`: peça numa mensagem só o que ele já tem (Instagram,
+   site do consultório, Lattes, LinkedIn, Doctoralia, currículo em PDF) e siga a seção 5 da
+   skill `segundo-cerebro`. Não faça questionário.
 
 ## Como atualizar
 

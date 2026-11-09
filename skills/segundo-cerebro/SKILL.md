@@ -1,6 +1,6 @@
 ---
 name: segundo-cerebro
-description: Segundo cérebro do médico no Obsidian, na pasta ~/segundo-cerebro. Use no começo de toda tarefa nova (consultar o que já existe), no fim de toda entrega com substância (registrar o que foi decidido e aprendido) e quando o médico pedir "procure no meu segundo cérebro", "o que eu já tenho sobre", "registre isso", "anote no diário", "guarde essa decisão", "faça a faxina do segundo cérebro", "salve o segundo cérebro". Também para montar o cofre pela primeira vez.
+description: Segundo cérebro do médico no Obsidian, na pasta ~/segundo-cerebro. Use no começo de toda tarefa nova (consultar o que já existe), no fim de toda entrega com substância (registrar o que foi decidido e aprendido) e quando o médico pedir "procure no meu segundo cérebro", "o que eu já tenho sobre", "registre isso", "anote no diário", "guarde essa decisão", "faça a faxina do segundo cérebro", "salve o segundo cérebro". Também para montar o cofre pela primeira vez e para montar ou atualizar a nota Quem sou eu ("monte a minha nota Quem sou eu", "leia o meu Instagram, site, Lattes ou currículo").
 ---
 
 # Segundo cérebro
@@ -17,7 +17,7 @@ simplificado para a Mentoria HORMOFEM.
 
 | Caminho | Quem escreve | O que é |
 |---|---|---|
-| `Quem sou eu.md` | o médico | Perfil, projetos e jeito de trabalhar. Leia antes da primeira tarefa da sessão |
+| `Quem sou eu.md` | você, a pedido | Perfil, projetos e jeito de trabalhar, montado a partir do que o médico já tem (seção 5). Leia antes da primeira tarefa da sessão |
 | `Início.md` | ninguém | Explica o cofre para o médico |
 | `Índice.md` | o script | Lista de todas as notas. Nunca edite à mão: rode `indice.mjs` |
 | `notas/` | você | Uma nota por assunto, plana (sem subpastas), com `tipo:` no frontmatter |
@@ -138,19 +138,48 @@ Se o cofre for um repositório (etapa 6 da trilha), ele é salvo sozinho a cada 
 Para salvar na hora, rode `salvar.mjs`. O repositório é sempre **privado**. Se o salvamento
 parar por conflito, explique ao médico em linguagem simples e resolva com ele.
 
-## 5. Memória curta e segundo cérebro
+## 5. Montar a nota Quem sou eu
+
+O médico não preenche questionário. Você monta a nota a partir do que ele já tem publicado ou
+guardado. Faça isso quando ele pedir, ou ofereça quando a nota ainda tiver `status: modelo`.
+
+1. **Peça as fontes numa mensagem só, sem perguntas sobre a vida dele.** Qualquer uma basta:
+   Instagram profissional, site do consultório, link do Lattes, LinkedIn, perfil na Doctoralia
+   ou no Google, currículo em PDF ou Word, bio de palestra, apresentação, página "sobre mim".
+   Diga que ele pode arrastar arquivos para o terminal ou colar o texto.
+2. **Leia cada fonte.** Sites e Lattes: busque a página. Instagram e LinkedIn costumam bloquear
+   leitura automática: use o Claude no Chrome (`/chrome`) com a conta dele aberta, ou peça um
+   print da bio. Arquivos: leia direto, não copie o arquivo para o cofre.
+3. **Extraia só o perfil profissional:** nome e como assina, especialidade, CRM e RQE se
+   estiverem públicos, cidade e onde atende, temas que trata, público, formação e títulos,
+   ensino e pesquisa, redes e site, produtos (cursos, livros), tom de voz que ele usa nas
+   publicações, palavras e termos dele.
+4. **Deixe de fora:** CPF, RG, endereço de casa, telefone pessoal, família e dados de saúde
+   dele (a menos que ele peça), e tudo de paciente, inclusive depoimentos e fotos com
+   pacientes que apareçam nas redes.
+5. **Escreva a nota** nas seções do modelo. O que você deduziu e não leu escrito, marque
+   "(deduzido, confirmar)". Preencha "De onde veio esta nota" com cada fonte e a data da
+   leitura. Apague o aviso do modelo, tire `status: modelo` e atualize `atualizado:`.
+6. **Mostre um resumo de 5 linhas** e pergunte só se está certo. A seção "Como gosto de
+   trabalhar" cresce com o uso: cada correção dele vira linha ali (e nota `preferencia` se
+   precisar de mais de uma frase).
+7. Registre no diário. Para atualizar depois, ele manda o link ou o arquivo novo e você refaz
+   só o trecho que mudou, riscando e datando o que foi superado.
+
+## 6. Memória curta e segundo cérebro
 
 O `CLAUDE.md` global guarda poucas regras que valem em toda sessão (uma frase cada). Assunto que
 precisa de parágrafo, links e evolução no tempo vai para uma nota do segundo cérebro. Não
 duplique: se virou nota, o CLAUDE.md não repete.
 
-## 6. Regras que não mudam
+## 7. Regras que não mudam
 
 - **Nenhum dado que identifique paciente**: nome, CPF, data de nascimento, telefone, foto, exame
   com nome, prontuário. Caso clínico só anonimizado (idade aproximada e quadro). Pasta com
   "paciente" no nome nunca entra na busca nem no cofre.
 - **Nenhuma senha, token ou chave.** Anote só onde está guardada ("no gerenciador de senhas").
 - Português do Brasil, frases curtas, datas absolutas (10/03/2027, nunca "ontem").
-- Não edite `pessoal/` nem `Quem sou eu.md` sem pedido do médico.
+- Não edite `pessoal/` sem pedido do médico. `Quem sou eu.md` só muda pelo método da seção 5
+  ou a pedido dele.
 - Se o cofre ainda não existir, rode o instalador do kit:
   `node ~/claude-code/kit-ia-mentoria/instalar.mjs`.

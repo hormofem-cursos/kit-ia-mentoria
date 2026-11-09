@@ -1,5 +1,6 @@
 ---
 tipo: perfil
+status: modelo
 criado: {{DATA}}
 atualizado: {{DATA}}
 tags: [perfil]
@@ -9,27 +10,23 @@ tags: [perfil]
 
 # Quem sou eu
 
+> [!tip] Você não precisa escrever esta nota
+> Peça ao Claude Code: *"Monte a minha nota Quem sou eu"* e mande o que você já tem: o seu
+> Instagram, o site do consultório, o link do Lattes, o LinkedIn, o perfil na Doctoralia, o
+> currículo em PDF ou uma apresentação sua. Ele lê tudo, escreve esta nota e mostra o resumo
+> para você conferir. Este aviso some quando a nota estiver pronta.
+
 ## Identificação profissional
-- Nome e como gosto de ser chamado(a):
-- Especialidade e área de atuação:
-- Cidade e onde atendo:
 
 ## O que eu faço
-- Consultório (perfil das pacientes, tipo de atendimento):
-- Ensino, pesquisa, redes sociais:
 
 ## Projetos atuais
--
 
 ## Ferramentas que uso
-- Prontuário:
-- Agenda:
-- Redes sociais:
 
 ## Como gosto de trabalhar
-- Tom das respostas (curto e direto, explicado passo a passo...):
-- O que eu não quero que a IA faça:
-- Palavras e termos que uso:
 
 ## Regras do meu consultório
 - Nunca registrar dado identificável de paciente.
+
+## De onde veio esta nota

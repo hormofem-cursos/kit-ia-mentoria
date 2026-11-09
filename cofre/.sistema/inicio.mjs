@@ -3,7 +3,7 @@
 // o inventário e as últimas entradas do diário. Nunca derruba a sessão.
 import fs from "node:fs";
 import path from "node:path";
-import { COFRE, ESTADO, listar, lerEntrada, lerJSON, gravarJSON, evento, caminhoSistema } from "./lib.mjs";
+import { COFRE, ESTADO, listar, lerNota, lerEntrada, lerJSON, gravarJSON, evento, caminhoSistema } from "./lib.mjs";
 
 try {
   const d = await lerEntrada();
@@ -24,7 +24,10 @@ try {
     const txt = fs.readFileSync(path.join(COFRE, "diario", f), "utf8");
     for (const m of txt.matchAll(/^## (.+)$/gm)) ultimas.push(`${f.slice(0, 10)}: ${m[1]}`);
   }
-  const quem = fs.existsSync(path.join(COFRE, "Quem sou eu.md")) ? "Leia Quem sou eu.md antes da primeira tarefa." : "A nota Quem sou eu.md ainda não existe.";
+  const perfil = lerNota(path.join(COFRE, "Quem sou eu.md"));
+  const quem = !perfil ? "A nota Quem sou eu.md ainda não existe."
+    : perfil.status === "modelo" ? "A nota Quem sou eu.md ainda está vazia: no primeiro momento oportuno, ofereça montá-la a partir do que o médico já tem (Instagram, site, Lattes, currículo), pelo método da skill segundo-cerebro, seção 5. Sem questionário."
+    : "Leia Quem sou eu.md antes da primeira tarefa.";
   const busca = `node "${caminhoSistema("buscar.mjs")}" "termos"`;
   const reg = `node "${caminhoSistema("registrar.mjs")}" "Título" "o que mudou"`;
   const texto = [
